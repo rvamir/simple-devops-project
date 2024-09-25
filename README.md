@@ -1,6 +1,5 @@
 # simple-devops-project
 
-
 ## Project Overview
 
 This is a simple web application built using Python and Flask, which is served with Gunicorn. The application demonstrates a CI/CD pipeline using GitHub Actions, Docker, and Kubernetes. This project is designed for learning and showcases the deployment process for a basic web app.
@@ -14,8 +13,6 @@ This is a simple web application built using Python and Flask, which is served w
 - [Running the Application Locally](#running-the-application-locally)
 - [CI/CD Pipeline](#cicd-pipeline)
 - [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -51,16 +48,16 @@ Clone this repository to your local machine:
 git clone https://github.com/YOUR_GITHUB_USERNAME/simple-devops-app.git
 cd simple-devops-app
 
-Build the Docker Image
+###  Build the Docker Image
 Build the Docker image using the following command:
 docker build -t simple-devops-app .
 
-Running the Application Locally
+###  Running the Application Locally
 Run the Docker container:
 docker run -p 5000:5000 simple-devops-app
 Access the application at http://localhost:5000.
 
-CI/CD Pipeline
+### CI/CD Pipeline
 This project includes a CI/CD pipeline set up with GitHub Actions. On every push to the main branch, the following steps are executed:
 1. Checkout the code.
 2. Login to Docker Hub.
@@ -68,7 +65,7 @@ This project includes a CI/CD pipeline set up with GitHub Actions. On every push
 4. Push the image to Docker Hub.
 You can see the actions by navigating to the Actions tab in your GitHub repository.
 
-Deployment
+### Deployment
 To deploy the application on a Kubernetes cluster:
 1. Create the deployment and service:
 kubectl apply -f k8s/deployment.yaml
@@ -78,5 +75,5 @@ kubectl apply -f k8s/service.yaml
 kubectl get pods
 kubectl get services
 
-3. Access the application using the Nodeport and minikubeip
+3. Access the application using the external IP of the Kubernetes service.
 
