@@ -78,5 +78,5 @@ kubectl apply -f k8s/service.yaml
 kubectl get pods
 kubectl get services
 
-3. Access the application using the external IP of the Kubernetes service.
+3. Access the application using the Nodeport and minikubeip
 

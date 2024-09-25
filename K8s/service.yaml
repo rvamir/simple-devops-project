@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: simple-devops-service
 spec:
+  type: NodePort
   selector:
     app: simple-devops-app
   ports:
     - protocol: TCP
       port: 80
       targetPort: 5000
-  type: LoadBalancer
-
+      nodePort: 30000
